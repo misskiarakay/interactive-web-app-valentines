@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="gif2.gif" alt="Cute GIF" class="gif-top"> 
+        <h1>Will you be my Valentine? ♡</h1>
+        <div class="buttons">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+
+        <!-- Background Music (Plays after user interaction) -->
+        <audio id="backgroundMusic" loop>
+            <source src="final-message.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div id="letterPopup" class="hidden">
+        <div class="letter">
+            <h2>Happy Valentine's Day!♡ </h2>
+            <p>you are currently hacked...</p>
+            <p>I can now monitor everything you do, including you and every click.<br>
+            <p> proceed with caution.
+                Kidding! But before we move on, there is a task <br>
+               you must do.</p>
+            <p>Ready?</p>
+            <button id="continueButton">Ok???</button> 
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+    <script>
+        const backgroundMusic = new Audio("final-message.mp3");
+        backgroundMusic.loop = true;
+    
+        function resumeMusic() {
+            const savedTime = localStorage.getItem("musicTime");
+            if (savedTime) {
+                backgroundMusic.currentTime = parseFloat(savedTime);
+            }
+            backgroundMusic.play();
+        }
+    
+        window.onload = resumeMusic;
+    </script>
+    
+    
+    
+</body>
+</html>
+

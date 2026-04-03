@@ -1,0 +1,102 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: hsl(289, 100%, 50%);
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Full-page GIF background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg2.gif') no-repeat center center/cover;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 100px;
+    position: relative;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #f200ff;
+    text-shadow: 0px 0px 8px #ff00fb;
+    position: relative;
+    display: inline-block;
+}
+
+.title-gif {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #25ba45;
+    background: transparent;
+    color: #29a83e;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00ff00;
+    color: #000000;
+    box-shadow: 0px 0px 10px #00ff00;
+}
+
+#yesButton {
+    border-color: #00ff00;
+}
+
+#noButton {
+    border-color: #ff004d;
+    color: #ff004d;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Letter Popup with GIF */
+#letterPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 2px solid #38a038;
+    box-shadow: 0px 0px 12px #3bb03b;
+    border-radius: 10px;
+    text-align: center;
+    color: #27b227;
+}
+
+.letter-gif {
+    width: 200px;
+    display: block;
+    margin: 10px auto;
+}

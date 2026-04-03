@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart ✮ ⋆ ˚｡𖦹 ⋆｡°✩</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>My Heart ✮ ⋆ ˚｡𖦹 ⋆｡°✩</h1>
+    <canvas id="gameCanvas"></canvas>
+    <div id="winMessage" class="hidden">
+        <h2>Congrats!!! What you did was actually win my heart. 💕</h2>
+        <p>Notice there's a piece missing, it's you who filled it!</p>
+        <p>♡</p>
+        <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+
+    <!-- JavaScript for Music -->
+    <script>
+        const backgroundMusic = new Audio("snake.mp3");
+        backgroundMusic.loop = true;
+
+        function startMusic() {
+            backgroundMusic.play().catch(error => console.log("Autoplay blocked:", error));
+        }
+
+        // Start music when the user interacts with the page
+        document.addEventListener("click", startMusic);
+        document.addEventListener("keydown", startMusic);
+    </script>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
+
